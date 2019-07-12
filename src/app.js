@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 const app = express()
 const port = process.env.PORT || 3000
 
-const weatherMessage = ({dailysummary, currentconditions, temperature, pricipitation}) => 'Today: ' + dailysummary + '\nCurrent Conditions: ' + currentconditions + ', with a temperature of ' + temperature + ' and ' + pricipitation + '% chance of pricipitation.'
+const weatherMessage = ({dailysummary, currentconditions, temperature, pricipitation, temperatureHigh, temperatureLow, humidity}) => 'Today: ' + dailysummary + '<br />Current Conditions: ' + currentconditions + ', with a temperature of ' + temperature + ' and ' + pricipitation + '% chance of pricipitation.<br />High Temp: ' + temperatureHigh + '<br />Low Temp: ' + temperatureLow + '<br />Humidity: ' + humidity
 
 //express config paths
 const publicpath = path.join(__dirname, '../public')

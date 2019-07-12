@@ -18,7 +18,10 @@ const forecast = (lat,long,callback) => {
                 dailysummary: body.daily.data[0].summary,
                 currentconditions: body.currently.summary,
                 temperature: body.currently.temperature,
-                pricipitation: body.currently.precipProbability
+                pricipitation: body.currently.precipProbability,
+                temperatureHigh: body.daily.data[0].temperatureHigh,
+                temperatureLow: body.daily.data[0].temperatureLow,
+                humidity: body.daily.data[0].humidity
             })
         }
     })
